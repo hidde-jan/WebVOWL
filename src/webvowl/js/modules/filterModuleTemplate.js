@@ -1,28 +1,28 @@
 module.exports = function () {
 
-	var filter = {},
-		filteredNodes,
-		filteredProperties;
+  var filter = {},
+    filteredNodes,
+    filteredProperties;
 
 
-	filter.filter = function (nodes, properties) {
+  filter.filter = function (nodes, properties) {
 
-		// Filter the data
+    // Filter the data
 
-		filteredNodes = nodes;
-		filteredProperties = properties;
-	};
-
-
-	// Functions a filter must have
-	filter.filteredNodes = function () {
-		return filteredNodes;
-	};
-
-	filter.filteredProperties = function () {
-		return filteredProperties;
-	};
+    filteredNodes = nodes;
+    filteredProperties = properties;
+  };
 
 
-	return filter;
+  // Functions a filter must have
+  filter.filteredNodes = function () {
+    return filteredNodes;
+  };
+
+  filter.filteredProperties = function () {
+    return filteredProperties;
+  };
+
+
+  return filter;
 };

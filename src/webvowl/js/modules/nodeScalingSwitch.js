@@ -5,51 +5,51 @@
  */
 module.exports = function (graph) {
 
-	var DEFAULT_STATE = true;
+  var DEFAULT_STATE = true;
 
-	var filter = {},
-		nodes,
-		properties,
-		enabled = DEFAULT_STATE,
-		filteredNodes,
-		filteredProperties;
+  var filter = {},
+    nodes,
+    properties,
+    enabled = DEFAULT_STATE,
+    filteredNodes,
+    filteredProperties;
 
 
-	/**
+  /**
 	 * If enabled, the scaling of nodes according to individuals will be enabled.
 	 * @param untouchedNodes
 	 * @param untouchedProperties
 	 */
-	filter.filter = function (untouchedNodes, untouchedProperties) {
-		nodes = untouchedNodes;
-		properties = untouchedProperties;
+  filter.filter = function (untouchedNodes, untouchedProperties) {
+    nodes = untouchedNodes;
+    properties = untouchedProperties;
 
-		graph.options().scaleNodesByIndividuals(enabled);
+    graph.options().scaleNodesByIndividuals(enabled);
 
-		filteredNodes = nodes;
-		filteredProperties = properties;
-	};
+    filteredNodes = nodes;
+    filteredProperties = properties;
+  };
 
-	filter.enabled = function (p) {
-		if (!arguments.length) return enabled;
-		enabled = p;
-		return filter;
-	};
+  filter.enabled = function (p) {
+    if (!arguments.length) return enabled;
+    enabled = p;
+    return filter;
+  };
 
-	filter.reset = function () {
-		enabled = DEFAULT_STATE;
-	};
-
-
-	// Functions a filter must have
-	filter.filteredNodes = function () {
-		return filteredNodes;
-	};
-
-	filter.filteredProperties = function () {
-		return filteredProperties;
-	};
+  filter.reset = function () {
+    enabled = DEFAULT_STATE;
+  };
 
 
-	return filter;
+  // Functions a filter must have
+  filter.filteredNodes = function () {
+    return filteredNodes;
+  };
+
+  filter.filteredProperties = function () {
+    return filteredProperties;
+  };
+
+
+  return filter;
 };

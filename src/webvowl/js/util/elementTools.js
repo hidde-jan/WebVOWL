@@ -10,37 +10,37 @@ var Label = require("../elements/links/Label");
 
 var tools = {};
 module.exports = function () {
-	return tools;
+  return tools;
 };
 
 tools.isLabel = function (element) {
-	return element instanceof Label;
+  return element instanceof Label;
 };
 
 tools.isNode = function (element) {
-	return element instanceof BaseNode;
+  return element instanceof BaseNode;
 };
 
 tools.isDatatype = function (node) {
-	return node instanceof DatatypeNode;
+  return node instanceof DatatypeNode;
 };
 
 tools.isThing = function (node) {
-	return node instanceof Thing;
+  return node instanceof Thing;
 };
 
 tools.isProperty = function (element) {
-	return element instanceof BaseProperty;
+  return element instanceof BaseProperty;
 };
 
 tools.isObjectProperty = function (element) {
-	return element instanceof ObjectProperty;
+  return element instanceof ObjectProperty;
 };
 
 tools.isDatatypeProperty = function (element) {
-	return element instanceof DatatypeProperty;
+  return element instanceof DatatypeProperty;
 };
 
 tools.isRdfsSubClassOf = function (property) {
-	return property instanceof RdfsSubClassOf;
+  return property instanceof RdfsSubClassOf;
 };

@@ -15,9 +15,9 @@ properties.push(require("./implementations/RdfsSubClassOf"));
 properties.push(require("./implementations/SetOperatorProperty"));
 
 var map = d3.map(properties, function (Prototype) {
-	return new Prototype().type();
+  return new Prototype().type();
 });
 
 module.exports = function () {
-	return map;
+  return map;
 };

@@ -33,17 +33,17 @@ webvowl.modules.subclassFilter = require("./modules/subclassFilter");
 
 webvowl.nodes = {};
 nodeMap.entries().forEach(function (entry) {
-	mapEntryToIdentifier(webvowl.nodes, entry);
+  mapEntryToIdentifier(webvowl.nodes, entry);
 });
 
 webvowl.properties = {};
 propertyMap.entries().forEach(function (entry) {
-	mapEntryToIdentifier(webvowl.properties, entry);
+  mapEntryToIdentifier(webvowl.properties, entry);
 });
 
 function mapEntryToIdentifier(map, entry) {
-	var identifier = entry.key.replace(":", "").toLowerCase();
-	map[identifier] = entry.value;
+  var identifier = entry.key.replace(":", "").toLowerCase();
+  map[identifier] = entry.value;
 }
 
 
